@@ -40,7 +40,7 @@ for epoch in range(10001):
         y=np.argmax(y,axis=1)
     acc=np.mean(predictions==y)
 
-
+    optimizer.pre_update_para()
     if not epoch%100:
         print(f"epoch : {epoch}"+f" loss :{loss:.3f}"+ f" accuracy :{acc:.3f}" + f"lr:{optimizer.current_learning_rate}")
 
