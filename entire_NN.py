@@ -21,7 +21,7 @@ class Loss_Catagorical_Entropy(Loss):
         if len(y_true.shape)==1:
             correct_confidenses=self.y_clipped[range(samples),y_true]
         else:
-            correct_confidenses=np.sum(y_pred*y_true,axis=1)
+            correct_confidenses=np.sum(self.y_clipped*y_true,axis=1)
 
         return -np.log(correct_confidenses)        
 class Activation_softmax:
