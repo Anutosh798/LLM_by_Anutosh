@@ -1,5 +1,5 @@
 #this is file where i try out snippets
-# import numpy as np
+import numpy as np
 
 # a=np.array([[1,2],
 #             [9,4]])
@@ -12,3 +12,11 @@
 #     print("hello")
 # else:
 #     print("bye")    
+
+#trying out how np.clip() works
+
+a=np.array([[1,2,5],
+            [-1,8,3]])
+a_clipped=np.clip(a,1,5)
+
+print(a_clipped)
