@@ -5,7 +5,7 @@ from nnfs.datasets import spiral_data
 nnfs.init()
 
 class Optimizer_SGD:
-    def __init__(self,learning_rate=1.,decay=0.,momentum=0):
+    def __init__(self,learning_rate=0.001,decay=0.,momentum=0):
         self.learning_rate=learning_rate
         self.current_learning_rate=learning_rate
         self.decay=decay
@@ -45,7 +45,7 @@ activation1=Actiavtion_ReLU()
 dense2=Layer_Dense(64,3)
 loss_activation=Activation_Softmax_Loss_CatagoricalEntropyLoss()
 
-optimizer=Optimizer_SGD(decay=1e-3,momentum=0.9)
+optimizer=Optimizer_SGD(decay=1e-7,momentum=0.9)
 
 for epoch in range(10001):
     dense1.forward(X)
