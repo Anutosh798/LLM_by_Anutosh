@@ -44,7 +44,7 @@ dense2=Layer_Dense(64,3)
 loss_activation=Activation_Softmax_Loss_CatagoricalEntropyLoss()
 
 optimizer=Optimizer_RSMprop(learning_rate=0.001,decay=1e-7,rho=0.9)
-for epoch in range(10001):
+for epoch in range(0001):
     dense1.forward(X)
     activation1.forward(dense1.outputs)
     dense2.forward(activation1.outputs)
