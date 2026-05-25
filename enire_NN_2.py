@@ -145,3 +145,23 @@ for epoch in range(10001):
     optmizer.update_para(dense1)
     optmizer.update_para(dense2)    
     optmizer.pre_update_para()
+#above is training phase lets how it works with testing data
+
+X_test,y_test=spiral_data(samples=100,classes=3)
+
+dense1.forward(X_test)
+
+activation1.forward(dense1.output)
+
+dense2.forward(activation1.output)
+
+loss=loss_activation.forward(dense2.output,y_test)
+
+y_true=y_test
+predictions=np.argmax(loss_activation.output,axis=1)
+if len(y_true.shape)==2:
+    y_true=np.argmax(y_true,axis=1)
+
+acc=np.mean(predictions==y_true)
+
+print("loss",loss,"acc",acc)
