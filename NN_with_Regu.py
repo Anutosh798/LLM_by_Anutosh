@@ -245,7 +245,7 @@ class Activation_Softmax_LossCatagoricalEntropy:
         self.dinputs[range(sample),y_true]+= -1
         self.dinputs=self.dinputs/sample
 
-X,y=spiral_data(samples=100,classes=3)
+X,y=spiral_data(samples=1000,classes=3)
 
 
 dense1=Layer_Dense(2,64,weights_regulizer_l2=5e-4,biases_regulizer_l2=5e-4)
