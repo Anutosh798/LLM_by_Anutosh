@@ -165,3 +165,6 @@ if len(y_true.shape)==2:
 acc=np.mean(predictions==y_true)
 
 print("loss",loss,"acc",acc)
+
+
+
