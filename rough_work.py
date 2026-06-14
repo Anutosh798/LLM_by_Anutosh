@@ -22,12 +22,26 @@ import numpy as np
 # print(a_clipped)
 
 #lets try out how argmax works
-y_true=np.array([1 ,2 ,0])
-print(len(y_true.shape)) 
+# y_true=np.array([1 ,2 ,0])
+# print(len(y_true.shape)) 
 
-d_values=np.array([[1,2,4],[4,5,6],[4,5,6]])
-samples=len(d_values)
+# d_values=np.array([[1,2,4],[4,5,6],[4,5,6]])
+# samples=len(d_values)
 
-print(d_values[range(samples),y_true])
+# print(d_values[range(samples),y_true])
+# how dataframe works
+
+import pandas as pd
 
 
+# x={'A':[23],'B':[55]}
+# pd.DataFrame(x)
+
+x = {"A": [1, 2, 3]}
+pd.DataFrame(x)
+
+x = [[1, 2], [3, 4]]
+pd.DataFrame(x)
+
+x = np.array([[1, 2], [3, 4]])
+pd.DataFrame(x)
