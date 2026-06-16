@@ -37,11 +37,24 @@ import pandas as pd
 # x={'A':[23],'B':[55]}
 # pd.DataFrame(x)
 
-x = {"A": [1, 2, 3]}
-pd.DataFrame(x)
+# x = {"A": [1, 2, 3]}
+# pd.DataFrame(x)
 
-x = [[1, 2], [3, 4]]
-pd.DataFrame(x)
+# x = [[1, 2], [3, 4]]
+# pd.DataFrame(x)
 
-x = np.array([[1, 2], [3, 4]])
-pd.DataFrame(x)
+# x = np.array([[1, 2], [3, 4]])
+# pd.DataFrame(x)
+import tensorflow as tf
+from tensorflow import keras
+from keras.models import Sequential
+
+model=Sequential()
+model.add(keras.layers.Dense(5,input_shape=(5,)))
+model.add(keras.layers.Dense(10,activation="relu"))
+model.add(keras.layers.Dense(1))
+
+weights=model.get_weights()
+print(weights)
+
+
